@@ -20,3 +20,12 @@ You should see the following log messages in your terminal (the last two may app
 - `Attached to channel`
 - `Published to Ably`
 - `Got message from Ably`
+
+## Testing a non-published version of `ably-js`
+
+These steps use `npm pack`, which emits a `.tgz` file similar to that uploaded by `npm publish`.
+
+1. Check out the `ably-js` repository at the commit you wish to test.
+2. At the root of the `ably-js` repository, run `npm run build && npm pack --pack-destination <path>`, where `<path>` is the directory you wish to output the `.tgz` file to.
+3. In the current repository, change the `package.json`’s `dependencies.ably` entry to `"file:<tgz-file-path>"`, where `<tgz-file-path>` is the path to the `.tgz` file output by the previous step.
+4. Run `npm install`.
