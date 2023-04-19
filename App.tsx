@@ -25,6 +25,9 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import * as Ably from 'ably/promises';
+import {ABLY_KEY} from '@env';
+
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -61,6 +64,36 @@ function App(): JSX.Element {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  React.useEffect(() => {
+    console.log('Hello World, from React Native!');
+
+    const key = ABLY_KEY;
+
+    if (key === undefined || key.length === 0) {
+      throw Error(
+        'ABLY_KEY not set in .env file. See README for instructions.',
+      );
+    }
+
+    const realtime = new Ably.Realtime({key});
+
+    const channel = realtime.channels.get('someChannel');
+
+    channel
+      .attach()
+      .then(() => {
+        console.log('Attached to channel');
+
+        channel.subscribe(message => {
+          console.log('Got message from Ably: ', message);
+        });
+
+        return channel.publish('someName', {foo: 'bar'});
+      })
+      .then(() => console.log('Published to Ably'))
+      .catch(error => console.log('Caught error: ', error));
+  });
 
   return (
     <SafeAreaView style={backgroundStyle}>
