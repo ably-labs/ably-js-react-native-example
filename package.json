@@ -10,7 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "ably": "^1.2.39",
+    "ably": "^1.2.48",
     "react": "18.2.0",
     "react-native": "0.73.2"
   },
