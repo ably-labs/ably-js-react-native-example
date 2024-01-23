@@ -78,6 +78,10 @@ function App(): React.JSX.Element {
 
     const realtime = new Ably.Realtime({key});
 
+    realtime.connection.on(stateChange => {
+      console.log('Connection event state change: ', stateChange);
+    });
+
     const channel = realtime.channels.get('someChannel');
 
     channel
@@ -87,6 +91,13 @@ function App(): React.JSX.Element {
 
         channel.subscribe(message => {
           console.log('Got message from Ably: ', message);
+        });
+
+        channel.on('attached', stateChange => {
+          console.log(
+            'Channel attached event listener state change: ',
+            stateChange,
+          );
         });
 
         return channel.publish('someName', {foo: 'bar'});
