@@ -76,7 +76,7 @@ function App(): React.JSX.Element {
       );
     }
 
-    const realtime = new Ably.Realtime({key});
+    const realtime = new Ably.Realtime({key, log: {level: 4}});
 
     realtime.connection.on(stateChange => {
       console.log('Connection event state change: ', stateChange);
@@ -98,6 +98,20 @@ function App(): React.JSX.Element {
             'Channel attached event listener state change: ',
             stateChange,
           );
+          if (!stateChange.resumed) {
+            channel.history({untilAttach: true}).then(paginatedResult => {
+              console.log(
+                'Fetched missed messages from history (with untilAttach): ',
+                paginatedResult.items,
+              );
+            });
+            channel.history().then(paginatedResult => {
+              console.log(
+                'Fetched missed messages from history (without untilAttach): ',
+                paginatedResult.items,
+              );
+            });
+          }
         });
 
         return channel.publish('someName', {foo: 'bar'});
