@@ -102,13 +102,13 @@ function App(): React.JSX.Element {
             channel.history({untilAttach: true}).then(paginatedResult => {
               console.log(
                 'Fetched missed messages from history (with untilAttach): ',
-                paginatedResult.items,
+                JSON.stringify(paginatedResult.items),
               );
             });
             channel.history().then(paginatedResult => {
               console.log(
                 'Fetched missed messages from history (without untilAttach): ',
-                paginatedResult.items,
+                JSON.stringify(paginatedResult.items),
               );
             });
           }
