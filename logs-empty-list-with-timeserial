@@ -1,0 +1,224 @@
+Messages sent whilst in background:
+
+- WhilstInBackground-2024-02-01-3.1
+- WhilstInBackground-2024-02-01-3.2
+- WhilstInBackground-2024-02-01-3.3
+
+ LOG  Running "AblyJSReactNativeExample" with {"rootTag":1,"initialProps":{}}
+ LOG  Hello World, from React Native!
+ LOG  10:57:32.245 Ably: Rest(): initialized with clientOptions {"key":"dBjIJA.Op2L8Q:W2de7dPtcPxB5Y-NHvV1Zr4D6_zHSMV-3QieRG-6Omg","log":{"level":4},"promises":true}
+ LOG  10:57:32.246 Ably: Rest(): started; version = 1.2.48
+ LOG  10:57:32.247 Ably: Auth(): anonymous, using basic auth
+ LOG  10:57:32.248 Ably: Realtime():
+ LOG  10:57:32.250 Ably: Realtime.ConnectionManager(): started
+ LOG  10:57:32.250 Ably: Realtime.ConnectionManager(): requested transports = [xhr_polling,xhr_streaming,jsonp,web_socket]
+ LOG  10:57:32.250 Ably: Realtime.ConnectionManager(): available transports = [xhr_polling,xhr_streaming,web_socket]
+ LOG  10:57:32.250 Ably: Realtime.ConnectionManager(): http hosts = [rest.ably.io,D.ably-realtime.com,A.ably-realtime.com,B.ably-realtime.com]
+ LOG  10:57:32.251 Ably: Realtime.connect():
+ LOG  10:57:32.251 Ably: Connection.connect():
+ LOG  10:57:32.252 Ably: ConnectionManager.requestState(): requested state: connecting; current state: initialized
+ LOG  10:57:32.252 Ably: ConnectionManager.cancelTransitionTimer():
+ LOG  10:57:32.253 Ably: Connection state: connecting
+ LOG  10:57:32.253 Ably: ConnectionManager.enactStateChange: setting new state: connecting; reason = undefined
+ LOG  10:57:32.254 Ably: Channel(): started; name = someChannel
+ LOG  10:57:32.254 Ably: RealtimeChannel(): started; name = someChannel
+ LOG  10:57:32.255 Ably: RealtimeChannel.requestState: name = someChannel, state = attaching
+ LOG  10:57:32.256 Ably: RealtimeChannel.notifyState: name = someChannel, current state = initialized, notifying state attaching
+ LOG  10:57:32.256 Ably: Channel state for channel "someChannel": attaching
+ LOG  10:57:32.257 Ably: RealtimeChannel.checkPendingState: sendEvents is false; state is connecting
+ LOG  Connection event state change:  {"current": "connecting", "previous": "initialized"}
+ LOG  10:57:32.263 Ably: ConnectionManager.startConnect(): starting connection
+ LOG  10:57:32.264 Ably: ConnectionManager.startTransitionTimer(): transitionState: connecting
+ LOG  10:57:32.265 Ably: ConnectionManager.getTransportParams(): Transport params = [mode=clean,format=json]
+ LOG  10:57:32.266 Ably: ConnectionManager.connectBase(): Trying to connect with base transport xhr_polling
+ LOG  10:57:32.267 Ably: ConnectionManager.tryATransport(): trying xhr_polling
+ LOG  10:57:32.267 Ably: CometTransport.connect(): starting
+ LOG  10:57:32.268 Ably: CometTransport.connect(): uri: https://rest.ably.io:443/comet/connect
+ LOG  10:57:32.269 Ably: CometTransport.connect(): connectParams:?key=dBjIJA.Op2L8Q%3AW2de7dPtcPxB5Y-NHvV1Zr4D6_zHSMV-3QieRG-6Omg&stream=false&heartbeats=true&v=2&agent=ably-js%2F1.2.48%20reactnative
+ LOG  10:57:32.346 Ably: Transport.tryConnect(): viable transport XHRPollingTransport; uri=https://rest.ably.io:443/comet/; isConnected=false
+ LOG  10:57:32.347 Ably: ConnectionManager.tryATransport(): viable transport xhr_polling; setting pending
+ LOG  10:57:32.347 Ably: ConnectionManager.setTransportPending(): transport = XHRPollingTransport; uri=https://rest.ably.io:443/comet/; isConnected=false; mode = clean
+ LOG  10:57:32.349 Ably: Transport.onProtocolMessage(): received on xhr_polling: [ProtocolMessage; action=CONNECTED; connectionId=J4fgcGQEJ7]; connectionId = undefined
+ LOG  10:57:32.349 Ably: CometTransport.onConnect(): baseUri = https://rest.ably.io:443/comet/108FqPaAABY7X7!J4fgcGQEJ7AXfNkS9baCDo-72981
+ LOG  10:57:32.350 Ably: ConnectionManager.activateTransport(): transport = XHRPollingTransport; uri=https://rest.ably.io:443/comet/; isConnected=true
+ LOG  10:57:32.351 Ably: ConnectionManager.activateTransport(): connectionId =  J4fgcGQEJ7
+ LOG  10:57:32.351 Ably: ConnectionManager.activateTransport(): connectionDetails =  {"clientId":"*","connectionKey":"108FqPaAABY7X7!J4fgcGQEJ7AXfNkS9baCDo-72981","maxMessageSize":65536,"maxInboundRate":75,"maxOutboundRate":75,"maxFrameSize":262144,"serverId":"frontend.1377.6.eu-west-1-A.i-0d5852e255d92847f.108FqPaAABY7X7","connectionStateTtl":120000,"maxIdleInterval":15000}
+ LOG  10:57:32.352 Ably: ConnectionManager.activateTransport(): current state = connecting
+ LOG  10:57:32.352 Ably: ConnectionManager.setConnection(): New connectionId; reattaching any attached channels
+ LOG  10:57:32.353 Ably: ConnectionManager.notifyState(): new state: connected
+ LOG  10:57:32.354 Ably: ConnectionManager.cancelTransitionTimer():
+ LOG  10:57:32.354 Ably: Connection state: connected
+ LOG  10:57:32.354 Ably: ConnectionManager.enactStateChange: setting new state: connected; reason = undefined
+ LOG  10:57:32.355 Ably: ConnectionManager.sendQueuedMessages(): sending 0 queued messages
+ LOG  10:57:32.355 Ably: RealtimeChannel.checkPendingState: name = someChannel, state = attaching
+ LOG  10:57:32.356 Ably: RealtimeChannel.attachImpl(): sending ATTACH message
+ LOG  10:57:32.356 Ably: ConnectionManager.send(): sending event
+ LOG  10:57:32.357 Ably: Protocol.send(): sending msg; [ProtocolMessage; action=ATTACH; channel=someChannel]
+ LOG  Connection event state change:  {"current": "connected", "previous": "connecting"}
+ LOG  10:57:32.358 Ably: ConnectionManager.upgradeIfNeeded(): upgrade possibilities: ["xhr_streaming","web_socket"]
+ LOG  10:57:32.359 Ably: ConnectionManager.tryATransport(): trying xhr_streaming
+ LOG  10:57:32.359 Ably: CometTransport.connect(): starting
+ LOG  10:57:32.360 Ably: CometTransport.connect(): uri: https://rest.ably.io:443/comet/connect
+ LOG  10:57:32.360 Ably: CometTransport.connect(): connectParams:?key=dBjIJA.Op2L8Q%3AW2de7dPtcPxB5Y-NHvV1Zr4D6_zHSMV-3QieRG-6Omg&upgrade=108FqPaAABY7X7!J4fgcGQEJ7AXfNkS9baCDo-72981&heartbeats=true&v=2&agent=ably-js%2F1.2.48%20reactnative
+ LOG  10:57:32.360 Ably: ConnectionManager.tryATransport(): trying web_socket
+ LOG  10:57:32.361 Ably: WebSocketTransport.connect(): starting
+ LOG  10:57:32.361 Ably: WebSocketTransport.connect(): uri: wss://realtime.ably.io:443/
+ LOG  10:57:32.362 Ably: WebSocketTransport.connect(): authParams: key: dBjIJA.Op2L8Q:W2de7dPtcPxB5Y-NHvV1Zr4D6_zHSMV-3QieRG-6Omg; err: null
+ LOG  10:57:32.456 Ably: Transport.tryConnect(): viable transport XHRStreamingTransport; uri=https://rest.ably.io:443/comet/; isConnected=false
+ LOG  10:57:32.457 Ably: ConnectionManager.tryATransport(): viable transport xhr_streaming; setting pending
+ LOG  10:57:32.457 Ably: ConnectionManager.setTransportPending(): transport = XHRStreamingTransport; uri=https://rest.ably.io:443/comet/; isConnected=false; mode = upgrade
+ LOG  10:57:32.458 Ably: Transport.onProtocolMessage(): received on xhr_streaming: [ProtocolMessage; action=CONNECTED; connectionId=J4fgcGQEJ7]; connectionId = J4fgcGQEJ7
+ LOG  10:57:32.458 Ably: CometTransport.onConnect(): baseUri = https://rest.ably.io:443/comet/108FqPaAABY7X7!J4fgcGQEJ7AXfNkS9baCDo-72984
+ LOG  10:57:32.484 Ably: Transport.onProtocolMessage(): received on xhr_polling: [ProtocolMessage; action=ATTACHED; channel=someChannel; channelSerial=108AhvKpABY6tS64146777@1706785030326-0; flags=PRESENCE,PUBLISH,SUBSCRIBE,PRESENCE_SUBSCRIBE]; connectionId = J4fgcGQEJ7
+ LOG  10:57:32.486 Ably: RealtimeChannel.setChannelSerial(): Updating channel serial; serial = 108AhvKpABY6tS64146777@1706785030326-0; previous = undefined
+ LOG  10:57:32.487 Ably: RealtimeChannel.notifyState: name = someChannel, current state = attaching, notifying state attached
+ LOG  10:57:32.487 Ably: RealtimePresence.onAttached(): channel = someChannel, hasPresence = false
+ LOG  10:57:32.488 Ably: PresenceMap.setInProgress(): inProgress = false
+ LOG  10:57:32.489 Ably: Channel state for channel "someChannel": attached
+ LOG  10:57:32.489 Ably: RealtimeChannel.onAttached: activating channel; name = someChannel
+ LOG  Attached to channel
+ LOG  10:57:32.492 Ably: RealtimeChannel.publish(): message count = 1
+ LOG  10:57:32.492 Ably: RealtimeChannel.publish(): sending message; channel state is attached
+ LOG  10:57:32.493 Ably: ConnectionManager.send(): sending event
+ LOG  10:57:32.494 Ably: Protocol.send(): sending msg; [ProtocolMessage; action=MESSAGE; channel=someChannel; msgSerial=0; messages=[ [Message; name=someName; encoding=json; data={"foo":"bar"}] ]]
+ LOG  10:57:32.610 Ably: WebSocketTransport.onWsOpen(): opened WebSocket
+ LOG  10:57:32.611 Ably: Transport.tryConnect(): viable transport WebSocketTransport; uri=wss://realtime.ably.io:443/?key=dBjIJA.Op2L8Q%3AW2de7dPtcPxB5Y-NHvV1Zr4D6_zHSMV-3QieRG-6Omg&upgrade=108FqPaAABY7X7!J4fgcGQEJ7AXfNkS9baCDo-72981&format=json&heartbeats=true&v=2&agent=ably-js%2F1.2.48%20reactnative
+ LOG  10:57:32.612 Ably: ConnectionManager.tryATransport(): viable transport web_socket; setting pending
+ LOG  10:57:32.613 Ably: ConnectionManager.setTransportPending(): transport = WebSocketTransport; uri=wss://realtime.ably.io:443/?key=dBjIJA.Op2L8Q%3AW2de7dPtcPxB5Y-NHvV1Zr4D6_zHSMV-3QieRG-6Omg&upgrade=108FqPaAABY7X7!J4fgcGQEJ7AXfNkS9baCDo-72981&format=json&heartbeats=true&v=2&agent=ably-js%2F1.2.48%20reactnative; mode = upgrade
+ LOG  10:57:32.614 Ably: WebSocketTransport.onWsData(): data received; length = 353; type = string
+ LOG  10:57:32.615 Ably: Transport.onProtocolMessage(): received on web_socket: [ProtocolMessage; action=CONNECTED; connectionId=J4fgcGQEJ7]; connectionId = J4fgcGQEJ7
+ LOG  10:57:32.617 Ably: ConnectionManager.scheduleTransportActivation(): Scheduling transport upgrade; transport = WebSocketTransport; uri=wss://realtime.ably.io:443/?key=dBjIJA.Op2L8Q%3AW2de7dPtcPxB5Y-NHvV1Zr4D6_zHSMV-3QieRG-6Omg&upgrade=108FqPaAABY7X7!J4fgcGQEJ7AXfNkS9baCDo-72981&format=json&heartbeats=true&v=2&agent=ably-js%2F1.2.48%20reactnative
+ LOG  10:57:32.617 Ably: ConnectionManager.scheduleTransportActivation(): Currently connected, so temporarily pausing events until the upgrade is complete
+ LOG  10:57:32.618 Ably: ConnectionManager.scheduleTransportActivation(): Syncing transport; transport = WebSocketTransport; uri=wss://realtime.ably.io:443/?key=dBjIJA.Op2L8Q%3AW2de7dPtcPxB5Y-NHvV1Zr4D6_zHSMV-3QieRG-6Omg&upgrade=108FqPaAABY7X7!J4fgcGQEJ7AXfNkS9baCDo-72981&format=json&heartbeats=true&v=2&agent=ably-js%2F1.2.48%20reactnative
+ LOG  10:57:32.620 Ably: Transport.onProtocolMessage(): received on xhr_polling: [ProtocolMessage; action=ACK; count=1; msgSerial=0]; connectionId = J4fgcGQEJ7
+ LOG  10:57:32.621 Ably: Protocol.onAck(): serial = 0; count = 1
+ LOG  10:57:32.622 Ably: MessageQueue.completeMessages(): serial = 0; count = 1
+ LOG  10:57:32.622 Ably: ConnectionManager.scheduleTransportActivation(): Activating transport; transport = WebSocketTransport; uri=wss://realtime.ably.io:443/?key=dBjIJA.Op2L8Q%3AW2de7dPtcPxB5Y-NHvV1Zr4D6_zHSMV-3QieRG-6Omg&upgrade=108FqPaAABY7X7!J4fgcGQEJ7AXfNkS9baCDo-72981&format=json&heartbeats=true&v=2&agent=ably-js%2F1.2.48%20reactnative
+ LOG  10:57:32.623 Ably: ConnectionManager.activateTransport(): transport = WebSocketTransport; uri=wss://realtime.ably.io:443/?key=dBjIJA.Op2L8Q%3AW2de7dPtcPxB5Y-NHvV1Zr4D6_zHSMV-3QieRG-6Omg&upgrade=108FqPaAABY7X7!J4fgcGQEJ7AXfNkS9baCDo-72981&format=json&heartbeats=true&v=2&agent=ably-js%2F1.2.48%20reactnative
+ LOG  10:57:32.624 Ably: ConnectionManager.activateTransport(): connectionId =  J4fgcGQEJ7
+ LOG  10:57:32.624 Ably: ConnectionManager.activateTransport(): connectionDetails =  {"clientId":"*","connectionKey":"108FqPaAABY7X7!J4fgcGQEJ7AXfNkS9baCDo-72987","maxMessageSize":65536,"maxInboundRate":75,"maxOutboundRate":75,"maxFrameSize":262144,"serverId":"frontend.1377.6.eu-west-1-A.i-0d5852e255d92847f.108FqPaAABY7X7","connectionStateTtl":120000,"maxIdleInterval":15000}
+ LOG  10:57:32.625 Ably: ConnectionManager.activateTransport(): current state = connected
+ LOG  10:57:32.626 Ably: RealtimeChannel.requestState: name = someChannel, state = attaching
+ LOG  10:57:32.626 Ably: RealtimeChannel.notifyState: name = someChannel, current state = attached, notifying state attaching
+ LOG  10:57:32.627 Ably: Channel state for channel "someChannel": attaching
+ LOG  10:57:32.628 Ably: RealtimeChannel.checkPendingState: name = someChannel, state = attaching
+ LOG  10:57:32.628 Ably: RealtimeChannel.attachImpl(): sending ATTACH message
+ LOG  10:57:32.629 Ably: ConnectionManager.send(): queueing msg; [ProtocolMessage; action=ATTACH; channel=someChannel; channelSerial=108AhvKpABY6tS64146777@1706785030326-0; flags=ATTACH_RESUME]
+ LOG  10:57:32.630 Ably: ConnectionManager.queue(): queueing event
+ LOG  10:57:32.631 Ably: CometTransport.requestDisconnect(): undefined
+ LOG  10:57:32.633 Ably: ConnectionManager.deactivateTransport(): transport = XHRPollingTransport; uri=https://rest.ably.io:443/comet/; isConnected=false
+ LOG  10:57:32.633 Ably: ConnectionManager.deactivateTransport(): state = disconnected; another transport is scheduled for activation
+ LOG  10:57:32.634 Ably: ConnectionManager.deactivateTransport(): reason =  Connection to server temporarily unavailable
+ LOG  10:57:32.635 Ably: CometTransport.dispose():
+ LOG  10:57:32.635 Ably: CometTransport.dispose(): aborting recv request
+ LOG  10:57:32.637 Ably: CometTransport.requestDisconnect(): undefined
+ LOG  10:57:32.637 Ably: ConnectionManager.deactivateTransport(): transport = XHRStreamingTransport; uri=https://rest.ably.io:443/comet/; isConnected=false
+ LOG  10:57:32.638 Ably: ConnectionManager.deactivateTransport(): state = disconnected; was pending
+ LOG  10:57:32.638 Ably: ConnectionManager.deactivateTransport(): reason =  Connection to server temporarily unavailable
+ LOG  10:57:32.639 Ably: CometTransport.dispose():
+ LOG  10:57:32.640 Ably: CometTransport.dispose(): aborting recv request
+ LOG  10:57:32.641 Ably: ConnectionManager.scheduleTransportActivation(): Pre-upgrade protocol idle, sending queued messages on upgraded transport; transport = WebSocketTransport; uri=wss://realtime.ably.io:443/?key=dBjIJA.Op2L8Q%3AW2de7dPtcPxB5Y-NHvV1Zr4D6_zHSMV-3QieRG-6Omg&upgrade=108FqPaAABY7X7!J4fgcGQEJ7AXfNkS9baCDo-72981&format=json&heartbeats=true&v=2&agent=ably-js%2F1.2.48%20reactnative
+ LOG  10:57:32.641 Ably: ConnectionManager.sendQueuedMessages(): sending 1 queued messages
+ LOG  10:57:32.642 Ably: Protocol.send(): sending msg; [ProtocolMessage; action=ATTACH; channel=someChannel; channelSerial=108AhvKpABY6tS64146777@1706785030326-0; flags=ATTACH_RESUME]
+ LOG  Published to Ably
+ LOG  10:57:32.648 Ably: WebSocketTransport.onWsData(): data received; length = 41; type = string
+ LOG  10:57:32.649 Ably: Transport.onProtocolMessage(): received on web_socket: [ProtocolMessage; action=ACTIVATE; connectionId=J4fgcGQEJ7]; connectionId = J4fgcGQEJ7
+ LOG  10:57:32.664 Ably: WebSocketTransport.onWsData(): data received; length = 109; type = string
+ LOG  10:57:32.665 Ably: Transport.onProtocolMessage(): received on web_socket: [ProtocolMessage; action=ATTACHED; channel=someChannel; channelSerial=108AhvKpABY6tS64146777@1706785030326-0; flags=HAS_BACKLOG,RESUMED,PRESENCE,PUBLISH,SUBSCRIBE,PRESENCE_SUBSCRIBE]; connectionId = J4fgcGQEJ7
+ LOG  10:57:32.665 Ably: RealtimeChannel.setChannelSerial(): Updating channel serial; serial = 108AhvKpABY6tS64146777@1706785030326-0; previous = 108AhvKpABY6tS64146777@1706785030326-0
+ LOG  10:57:32.666 Ably: RealtimeChannel.notifyState: name = someChannel, current state = attaching, notifying state attached
+ LOG  10:57:32.666 Ably: RealtimePresence.onAttached(): channel = someChannel, hasPresence = false
+ LOG  10:57:32.667 Ably: PresenceMap.setInProgress(): inProgress = false
+ LOG  10:57:32.667 Ably: Channel state for channel "someChannel": attached
+ LOG  10:57:32.667 Ably: RealtimeChannel.onAttached: activating channel; name = someChannel
+ LOG  Channel attached event listener state change:  {"current": "attached", "hasBacklog": true, "previous": "attaching", "resumed": true}
+ LOG  10:57:32.669 Ably: WebSocketTransport.onWsData(): data received; length = 311; type = string
+ LOG  10:57:32.670 Ably: Transport.onProtocolMessage(): received on web_socket: [ProtocolMessage; action=MESSAGE; id=J4fgcGQEJ7:0; channel=someChannel; channelSerial=108AhvKpABY6tS64146777@1706785052522-0; connectionId=J4fgcGQEJ7; timestamp=1706785052522; messages=[ [Message; name=someName; encoding=json; extras ={"timeserial":"108AhvKpABY6tS64146777@1706785052522-0"}; data={"foo":"bar"}; extras={"timeserial":"108AhvKpABY6tS64146777@1706785052522-0"}] ]]; connectionId = J4fgcGQEJ7
+ LOG  10:57:32.671 Ably: RealtimeChannel.setChannelSerial(): Updating channel serial; serial = 108AhvKpABY6tS64146777@1706785052522-0; previous = 108AhvKpABY6tS64146777@1706785030326-0
+ LOG  10:57:32.672 Ably: RealtimeChannel.onEvent(): received message
+ LOG  Got message from Ably:  {"clientId": undefined, "connectionId": "J4fgcGQEJ7", "connectionKey": undefined, "data": {"foo": "bar"}, "encoding": null, "extras": {"timeserial": "108AhvKpABY6tS64146777@1706785052522-0"}, "id": "J4fgcGQEJ7:0:0", "name": "someName"}
+ LOG  10:57:38.460 Ably: ConnectionManager.scheduleTransportActivation(): Proposed transport xhr_streaming is no better than current active transport web_socket - abandoning upgrade
+ LOG  10:57:47.522 Ably: WebSocketTransport.onWsData(): data received; length = 12; type = string
+ LOG  10:57:47.524 Ably: Transport.onProtocolMessage(): received on web_socket: [ProtocolMessage; action=HEARTBEAT]; connectionId = J4fgcGQEJ7
+ LOG  10:57:47.525 Ably: Transport.onProtocolMessage(): web_socket heartbeat; connectionId = J4fgcGQEJ7
+ WARN  11:00:29.200 Ably: Transport.onIdleTimerExpire(): No activity seen from realtime in 161675ms; assuming connection has dropped
+ LOG  11:00:29.202 Ably: Transport.requestDisconnect():
+ LOG  11:00:29.203 Ably: ConnectionManager.deactivateTransport(): transport = WebSocketTransport; uri=wss://realtime.ably.io:443/?key=dBjIJA.Op2L8Q%3AW2de7dPtcPxB5Y-NHvV1Zr4D6_zHSMV-3QieRG-6Omg&upgrade=108FqPaAABY7X7!J4fgcGQEJ7AXfNkS9baCDo-72981&format=json&heartbeats=true&v=2&agent=ably-js%2F1.2.48%20reactnative
+ LOG  11:00:29.203 Ably: ConnectionManager.deactivateTransport(): state = disconnected; was active
+ LOG  11:00:29.204 Ably: ConnectionManager.deactivateTransport(): reason =  No activity seen from realtime in 161675ms; assuming connection has dropped
+ LOG  11:00:29.207 Ably: ConnectionManager.deactivateTransport(): Getting, clearing, and requeuing 0 pending messages
+ LOG  11:00:29.208 Ably: ConnectionManager.notifyState(): new state: disconnected; will retry connection immediately
+ LOG  11:00:29.208 Ably: ConnectionManager.cancelTransitionTimer():
+ LOG  11:00:29.209 Ably: Connection state: disconnected; reason: [ErrorInfo: No activity seen from realtime in 161675ms; assuming connection has dropped; statusCode=408; code=80003]
+ LOG  11:00:29.210 Ably: ConnectionManager.enactStateChange: setting new state: disconnected; reason = No activity seen from realtime in 161675ms; assuming connection has dropped
+ LOG  11:00:29.210 Ably: WebSocketTransport.dispose():
+ LOG  11:00:29.221 Ably: WebSocketTransport.onWsClose(): Unclean disconnection of WebSocket ; code = 1001
+ LOG  11:00:29.222 Ably: MessageQueue.clear(): clearing 0 messages
+ LOG  11:00:29.227 Ably: ConnectionManager.requestState(): requested state: connecting; current state: disconnected
+ LOG  11:00:29.228 Ably: ConnectionManager.cancelTransitionTimer():
+ LOG  11:00:29.228 Ably: Connection state: connecting
+ LOG  11:00:29.229 Ably: ConnectionManager.enactStateChange: setting new state: connecting; reason = undefined
+ LOG  Connection event state change:  {"current": "disconnected", "previous": "connected", "reason": [Error: No activity seen from realtime in 161675ms; assuming connection has dropped], "retryIn": 14789.581067424288}
+ LOG  11:00:29.230 Ably: WebSocketTransport.dispose(): closing websocket
+ LOG  Connection event state change:  {"current": "connecting", "previous": "disconnected"}
+ LOG  11:00:29.230 Ably: ConnectionManager.startConnect(): starting connection
+ LOG  11:00:29.231 Ably: ConnectionManager.startTransitionTimer(): transitionState: connecting
+ LOG  11:00:29.232 Ably: ConnectionManager.checkConnectionStateFreshness(): Last known activity from realtime was 161707ms ago; discarding connection state
+ LOG  11:00:29.232 Ably: ConnectionManager.getTransportParams(): Transport params = [mode=clean,format=json]
+ LOG  11:00:29.233 Ably: ConnectionManager.connectPreference(): Trying to connect with stored transport preference web_socket
+ LOG  11:00:29.234 Ably: ConnectionManager.tryATransport(): trying web_socket
+ LOG  11:00:29.234 Ably: WebSocketTransport.connect(): starting
+ LOG  11:00:29.234 Ably: WebSocketTransport.connect(): uri: wss://realtime.ably.io:443/
+ LOG  11:00:29.235 Ably: WebSocketTransport.connect(): authParams: key: dBjIJA.Op2L8Q:W2de7dPtcPxB5Y-NHvV1Zr4D6_zHSMV-3QieRG-6Omg; err: null
+ LOG  11:00:29.395 Ably: WebSocketTransport.onWsOpen(): opened WebSocket
+ LOG  11:00:29.396 Ably: Transport.tryConnect(): viable transport WebSocketTransport; uri=wss://realtime.ably.io:443/?key=dBjIJA.Op2L8Q%3AW2de7dPtcPxB5Y-NHvV1Zr4D6_zHSMV-3QieRG-6Omg&format=json&heartbeats=true&v=2&agent=ably-js%2F1.2.48%20reactnative
+ LOG  11:00:29.396 Ably: ConnectionManager.tryATransport(): viable transport web_socket; setting pending
+ LOG  11:00:29.397 Ably: ConnectionManager.setTransportPending(): transport = WebSocketTransport; uri=wss://realtime.ably.io:443/?key=dBjIJA.Op2L8Q%3AW2de7dPtcPxB5Y-NHvV1Zr4D6_zHSMV-3QieRG-6Omg&format=json&heartbeats=true&v=2&agent=ably-js%2F1.2.48%20reactnative; mode = clean
+ LOG  11:00:29.409 Ably: WebSocketTransport.onWsData(): data received; length = 353; type = string
+ LOG  11:00:29.410 Ably: Transport.onProtocolMessage(): received on web_socket: [ProtocolMessage; action=CONNECTED; connectionId=H5VoGTuOYU]; connectionId = undefined
+ LOG  11:00:29.410 Ably: ConnectionManager.activateTransport(): transport = WebSocketTransport; uri=wss://realtime.ably.io:443/?key=dBjIJA.Op2L8Q%3AW2de7dPtcPxB5Y-NHvV1Zr4D6_zHSMV-3QieRG-6Omg&format=json&heartbeats=true&v=2&agent=ably-js%2F1.2.48%20reactnative
+ LOG  11:00:29.411 Ably: ConnectionManager.activateTransport(): connectionId =  H5VoGTuOYU
+ LOG  11:00:29.411 Ably: ConnectionManager.activateTransport(): connectionDetails =  {"clientId":"*","connectionKey":"108szmLqABY7Ft!H5VoGTuOYUAT23SRjo4Kyz-6eb4b","maxMessageSize":65536,"maxInboundRate":75,"maxOutboundRate":75,"maxFrameSize":262144,"serverId":"frontend.e4ab.7.eu-west-1-A.i-06ffdc44025449403.108szmLqABY7Ft","connectionStateTtl":120000,"maxIdleInterval":15000}
+ LOG  11:00:29.412 Ably: ConnectionManager.activateTransport(): current state = connecting
+ LOG  11:00:29.412 Ably: ConnectionManager.setConnection(): New connectionId; reattaching any attached channels
+ LOG  11:00:29.413 Ably: ConnectionManager.notifyState(): new state: connected
+ LOG  11:00:29.413 Ably: ConnectionManager.cancelTransitionTimer():
+ LOG  11:00:29.414 Ably: Connection state: connected
+ LOG  11:00:29.414 Ably: ConnectionManager.enactStateChange: setting new state: connected; reason = undefined
+ LOG  11:00:29.415 Ably: ConnectionManager.sendQueuedMessages(): sending 0 queued messages
+ LOG  11:00:29.415 Ably: RealtimeChannel.requestState: name = someChannel, state = attaching
+ LOG  11:00:29.416 Ably: RealtimeChannel.notifyState: name = someChannel, current state = attached, notifying state attaching
+ LOG  11:00:29.416 Ably: Channel state for channel "someChannel": attaching
+ LOG  11:00:29.416 Ably: RealtimeChannel.checkPendingState: name = someChannel, state = attaching
+ LOG  11:00:29.417 Ably: RealtimeChannel.attachImpl(): sending ATTACH message
+ LOG  11:00:29.417 Ably: ConnectionManager.send(): sending event
+ LOG  11:00:29.418 Ably: Protocol.send(): sending msg; [ProtocolMessage; action=ATTACH; channel=someChannel; channelSerial=108AhvKpABY6tS64146777@1706785052522-0; flags=ATTACH_RESUME]
+ LOG  Connection event state change:  {"current": "connected", "previous": "connecting"}
+ LOG  11:00:29.419 Ably: ConnectionManager.upgradeIfNeeded(): upgrade possibilities: []
+ LOG  11:00:29.448 Ably: WebSocketTransport.onWsData(): data received; length = 232; type = string
+ LOG  11:00:29.448 Ably: Transport.onProtocolMessage(): received on web_socket: [ProtocolMessage; action=ATTACHED; channel=someChannel; channelSerial=108AhvKpABY6tS64146777@1706785085861-0; error=[ErrorInfo: Unable to recover channel (messages expired); statusCode=404; code=90003; see https://help.ably.io/error/90003 ]; flags=PRESENCE,PUBLISH,SUBSCRIBE,PRESENCE_SUBSCRIBE]; connectionId = H5VoGTuOYU
+ LOG  11:00:29.449 Ably: RealtimeChannel.setChannelSerial(): Updating channel serial; serial = 108AhvKpABY6tS64146777@1706785085861-0; previous = 108AhvKpABY6tS64146777@1706785052522-0
+ LOG  11:00:29.450 Ably: RealtimeChannel.notifyState: name = someChannel, current state = attaching, notifying state attached
+ LOG  11:00:29.450 Ably: RealtimePresence.onAttached(): channel = someChannel, hasPresence = false
+ LOG  11:00:29.451 Ably: PresenceMap.setInProgress(): inProgress = false
+ LOG  11:00:29.451 Ably: Channel state for channel "someChannel": attached; reason: [ErrorInfo: Unable to recover channel (messages expired); statusCode=404; code=90003; see https://help.ably.io/error/90003 ]
+ LOG  11:00:29.451 Ably: RealtimeChannel.onAttached: activating channel; name = someChannel
+ LOG  Channel attached event listener state change:  {"current": "attached", "hasBacklog": false, "previous": "attaching", "reason": [Error: Unable to recover channel (messages expired)], "resumed": false}
+ LOG  11:00:29.452 Ably: RealtimeChannel.history(): channel = someChannel
+ LOG  11:00:29.453 Ably: RealtimeChannel.history(): channel = someChannel
+ LOG  11:00:29.455 Ably: Resource.get(): Sending; /channels/someChannel/messages?from_serial=108AhvKpABY6tS64146777@1706785085861-0&envelope=json
+ LOG  11:00:29.455 Ably: Resource.get(): Sending; /channels/someChannel/messages?from_serial=108AhvKpABY6tS64146777@1706785085861-0&envelope=json; Body: null
+ LOG  11:00:29.457 Ably: RealtimeChannel.history(): channel = someChannel
+ LOG  11:00:29.457 Ably: RealtimeChannel.history(): channel = someChannel
+ LOG  11:00:29.458 Ably: Resource.get(): Sending; /channels/someChannel/messages?envelope=json
+ LOG  11:00:29.458 Ably: Resource.get(): Sending; /channels/someChannel/messages?envelope=json; Body: null
+ LOG  11:00:29.531 Ably: Resource.get(): Received; /channels/someChannel/messages?from_serial=108AhvKpABY6tS64146777@1706785085861-0&envelope=json; Headers: Link=<./messages?start=1706698829547&end=1706785229547&limit=100&direction=backwards&cont=true&format=json&firstEnd=1706785229547&fromSerial=108AhvKpABY6tS64146777%401706785085861-0>; rel="first",<./messages?start=1706698829547&end=1706785229547&limit=100&direction=backwards&cont=true&format=json&firstEnd=1706785229547&fromSerial=108AhvKpABY6tS64146777%401706785085861-0>; rel="current"&Content-Type=application/json&X-Robots-Tag=noindex; StatusCode: 200; Body:
+ LOG  Fetched missed messages from history (with untilAttach):  []
+ LOG  11:00:29.544 Ably: Resource.get(): Received; /channels/someChannel/messages; Headers: Link=<./messages?start=1706698829555&end=1706785229555&limit=100&direction=backwards&cont=true&format=json&firstEnd=1706785229555&fromDate=1706785229555&mode=all>; rel="first",<./messages?start=1706698829555&end=1706785229555&limit=100&direction=backwards&cont=true&format=json&firstEnd=1706785229555&fromDate=1706785229555&mode=all>; rel="current"&Content-Type=application/json&X-Robots-Tag=noindex; StatusCode: 200; Body: [object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]
+ LOG  Fetched missed messages from history (without untilAttach):  [{"name":"","id":"HXEw5IWu1a:5:0","connectionId":"HXEw5IWu1a","extras":{"timeserial":"108AhvKpABY6tS64146777@1706785085861-0"},"data":"WhilstInBackground-2024-02-01-3.3"},{"name":"","id":"HXEw5IWu1a:4:0","connectionId":"HXEw5IWu1a","extras":{"timeserial":"108AhvKpABY6tS64146777@1706785083651-0"},"data":"WhilstInBackground-2024-02-01-3.2"},{"name":"","id":"HXEw5IWu1a:3:0","connectionId":"HXEw5IWu1a","extras":{"timeserial":"108AhvKpABY6tS64146777@1706785078043-0"},"data":"WhilstInBackground-2024-02-01-3.1"},{"name":"someName","id":"J4fgcGQEJ7:0:0","connectionId":"J4fgcGQEJ7","extras":{"timeserial":"108AhvKpABY6tS64146777@1706785052522-0"},"encoding":null,"data":{"foo":"bar"}},{"name":"someName","id":"YuKvA7pQS2:0:0","connectionId":"YuKvA7pQS2","extras":{"timeserial":"108AhvKpABY6tS64146777@1706785030326-0"},"encoding":null,"data":{"foo":"bar"}},{"name":"someName","id":"q0vDLMEbug:0:0","connectionId":"q0vDLMEbug","extras":{"timeserial":"108AhvKpABY6tS64146777@1706784998851-0"},"encoding":null,"data":{"foo":"bar"}},{"name":"","id":"HXEw5IWu1a:2:0","connectionId":"HXEw5IWu1a","extras":{"timeserial":"108AhvKpABY6tS64146777@1706784453919-0"},"data":"WhilstInBackground-2024-02-01-2.3"},{"name":"","id":"HXEw5IWu1a:1:0","connectionId":"HXEw5IWu1a","extras":{"timeserial":"108AhvKpABY6tS64146777@1706784451879-0"},"data":"WhilstInBackground-2024-02-01-2.2"},{"name":"","id":"HXEw5IWu1a:0:0","connectionId":"HXEw5IWu1a","extras":{"timeserial":"108AhvKpABY6tS64146777@1706784448677-0"},"data":"WhilstInBackground-2024-02-01-2.1"},{"name":"someName","id":"0o-jlK1BKg:0:0","connectionId":"0o-jlK1BKg","extras":{"timeserial":"108AhvKpABY6tS64146777@1706784437926-0"},"encoding":null,"data":{"foo":"bar"}},{"name":"someName","id":"cdkWj5yvBP:0:0","connectionId":"cdkWj5yvBP","extras":{"timeserial":"108AhvKpABY6tS64146777@1706784234910-0"},"encoding":null,"data":{"foo":"bar"}},{"name":"","id":"0COqLhoRUv:2:0","connectionId":"0COqLhoRUv","data":"WhilstInBackground-2023-02-01-1.3"},{"name":"","id":"0COqLhoRUv:1:0","connectionId":"0COqLhoRUv","data":"WhilstInBackground-2023-02-01-1.2"},{"name":"","id":"0COqLhoRUv:0:0","connectionId":"0COqLhoRUv","data":"WhilstInBackground-2023-02-01-1.1"},{"name":"someName","id":"BCLPatgquS:0:0","connectionId":"BCLPatgquS","encoding":null,"data":{"foo":"bar"}},{"name":"someName","id":"dBUhLE9Vsq:0:0","connectionId":"dBUhLE9Vsq","encoding":null,"data":{"foo":"bar"}}]
+ LOG  11:00:44.465 Ably: WebSocketTransport.onWsData(): data received; length = 12; type = string
+ LOG  11:00:44.467 Ably: Transport.onProtocolMessage(): received on web_socket: [ProtocolMessage; action=HEARTBEAT]; connectionId = H5VoGTuOYU
+ LOG  11:00:44.468 Ably: Transport.onProtocolMessage(): web_socket heartbeat; connectionId = H5VoGTuOYU
+ LOG  11:00:59.409 Ably: WebSocketTransport.onWsData(): data received; length = 12; type = string
+ LOG  11:00:59.411 Ably: Transport.onProtocolMessage(): received on web_socket: [ProtocolMessage; action=HEARTBEAT]; connectionId = H5VoGTuOYU
+ LOG  11:00:59.412 Ably: Transport.onProtocolMessage(): web_socket heartbeat; connectionId = H5VoGTuOYU
