@@ -25,7 +25,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import * as Ably from 'ably/promises';
+import * as Ably from 'ably';
 import {ABLY_KEY} from '@env';
 
 type SectionProps = PropsWithChildren<{
